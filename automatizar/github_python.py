@@ -10,7 +10,7 @@ import time
 
 class GithubPython(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox()
+        self.driver = webdriver.Firefox('/usr/bin/firefox')
         self.driver.implicitly_wait(30)
         self.base_url = "https://github.com/"
         self.verificationErrors = []
@@ -21,11 +21,11 @@ class GithubPython(unittest.TestCase):
         driver.get(self.base_url + "/")
         driver.find_element_by_link_text("Sign in").click()
         driver.find_element_by_id("login_field").clear()
-        driver.find_element_by_id("login_field").send_keys("<Nombre de Usuario>")
+        driver.find_element_by_id("login_field").send_keys("<Nombre de usuario>")
         driver.find_element_by_id("password").clear()
-        driver.find_element_by_id("password").send_keys("<Contraseña>")
+        driver.find_element_by_id("password").send_keys("<password>")
         driver.find_element_by_name("commit").click()
-	time.sleep(10)
+	    time.sleep(10)
 
     def is_element_present(self, how, what):
         try: self.driver.find_element(by=how, value=what)

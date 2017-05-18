@@ -1,4 +1,3 @@
-
 #!/bin/bash
 echo "¿Cuantas veces desea ejecutar el Remoto? "
 read num
