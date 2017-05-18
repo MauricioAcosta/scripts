@@ -14,8 +14,8 @@ username = browser.find_element_by_id("email")
 password = browser.find_element_by_id("pass")
 
 #Cambiamos los datos que seran ingreados a los campos email y pass
-username.send_keys("<tu_email>")
-password.send_keys("<tu_password>")
+username.send_keys("<Correo de facebook>")
+password.send_keys("<Contraseña de facebook>")
 
 #Emula el hacer click en "Iniciar Sesion"
 login_attempt = browser.find_element_by_xpath("//*[@type='submit']")
